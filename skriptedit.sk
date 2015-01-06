@@ -1,1 +1,13 @@
-#Code
+#Commands
+
+command /skriptedit [<text>] [<text>] [<text>]:
+	aliases: se,
+	trigger:
+		if sender is player:
+			if player has permission "se.help" or "se.*":
+				if arg 1 is not set:
+					execute player command "/se help"
+					stop
+				if arg 1 is "help" or "?":
+					send "&2SkriptEdit commands:"
+					send "&8>&e/se help &7-"
